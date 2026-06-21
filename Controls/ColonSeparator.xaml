@@ -1,0 +1,16 @@
+<UserControl
+    x:Class="MoooShowTime.Controls.ColonSeparator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoooShowTime.Controls"
+    Loaded="OnLoaded">
+
+    <!-- 
+        冒号分隔符控件
+        两个像素点阵圆点，用于时:分之间的显示
+        支持闪烁动画
+    -->
+    <Canvas x:Name="ColonCanvas" Width="53" Height="343">
+        <!-- 像素点由代码动态生成，高度与数字高度一致 -->
+    </Canvas>
+</UserControl>

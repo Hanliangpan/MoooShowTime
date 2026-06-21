@@ -1,0 +1,28 @@
+# Build outputs
+bin/
+obj/
+AppPackages/
+*.exe
+*.appx
+*.appxsym
+*.appxupload
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+packages.config
+
+# Generated images (optional, can be committed if desired)
+# generated-images/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -1,0 +1,16 @@
+<UserControl
+    x:Class="MoooShowTime.Controls.PixelDigit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoooShowTime.Controls"
+    Loaded="OnLoaded">
+
+    <!-- 
+        像素风格数字控件
+        基于 SVG 像素字形，5×7 像素网格
+        绿色霓虹风格
+    -->
+    <Canvas x:Name="PixelCanvas">
+        <!-- 所有像素点由代码动态生成 -->
+    </Canvas>
+</UserControl>

@@ -1,0 +1,16 @@
+<UserControl
+    x:Class="MoooShowTime.Controls.DotMatrixDigit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoooShowTime.Controls"
+    Loaded="OnLoaded">
+
+    <!-- 
+        点阵像素数码管数字控件
+        使用 Canvas + 小 Rectangle 绘制 7 段数码管样式
+        每段由 4x4 像素点阵组成，呈现复古怀旧像素风格
+    -->
+    <Canvas x:Name="DigitCanvas">
+        <!-- 所有像素点由代码动态生成 -->
+    </Canvas>
+</UserControl>

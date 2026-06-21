@@ -1,0 +1,162 @@
+﻿<Page
+    x:Class="MoooShowTime.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoooShowTime"
+    xmlns:controls="using:MoooShowTime.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Black"
+    RequestedTheme="Dark">
+
+    <!--
+        MoooShowTime - 复古点阵桌面时钟
+        横屏全屏显示，支持数码管风格 / 像素霓虹风格切换
+    -->
+
+    <Grid Background="#0A0F1A" Tapped="Grid_Tapped">
+        <!-- ==================== 数码管风格（默认） ==================== -->
+        <StackPanel
+            x:Name="DotMatrixPanel"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="0,30,0,0"
+            Visibility="Visible">
+
+            <!-- 小时十位 -->
+            <controls:DotMatrixDigit x:Name="DigitHourTens">
+                <controls:DotMatrixDigit.ActiveBrush>
+                    <SolidColorBrush Color="#32DC64" />
+                </controls:DotMatrixDigit.ActiveBrush>
+                <controls:DotMatrixDigit.InactiveBrush>
+                    <SolidColorBrush Color="#0D22C55E" />
+                </controls:DotMatrixDigit.InactiveBrush>
+            </controls:DotMatrixDigit>
+
+            <!-- 小时个位 -->
+            <controls:DotMatrixDigit x:Name="DigitHourOnes" Margin="6,0,0,0">
+                <controls:DotMatrixDigit.ActiveBrush>
+                    <SolidColorBrush Color="#32DC64" />
+                </controls:DotMatrixDigit.ActiveBrush>
+                <controls:DotMatrixDigit.InactiveBrush>
+                    <SolidColorBrush Color="#0D22C55E" />
+                </controls:DotMatrixDigit.InactiveBrush>
+            </controls:DotMatrixDigit>
+
+            <!-- 冒号分隔符 -->
+            <controls:ColonSeparator x:Name="ColonSeparator" Margin="14,0,14,0">
+                <controls:ColonSeparator.ActiveBrush>
+                    <SolidColorBrush Color="#32DC64" />
+                </controls:ColonSeparator.ActiveBrush>
+                <controls:ColonSeparator.InactiveBrush>
+                    <SolidColorBrush Color="#0822C55E" />
+                </controls:ColonSeparator.InactiveBrush>
+            </controls:ColonSeparator>
+
+            <!-- 分钟十位 -->
+            <controls:DotMatrixDigit x:Name="DigitMinuteTens">
+                <controls:DotMatrixDigit.ActiveBrush>
+                    <SolidColorBrush Color="#32DC64" />
+                </controls:DotMatrixDigit.ActiveBrush>
+                <controls:DotMatrixDigit.InactiveBrush>
+                    <SolidColorBrush Color="#0D22C55E" />
+                </controls:DotMatrixDigit.InactiveBrush>
+            </controls:DotMatrixDigit>
+
+            <!-- 分钟个位 -->
+            <controls:DotMatrixDigit x:Name="DigitMinuteOnes" Margin="6,0,0,0">
+                <controls:DotMatrixDigit.ActiveBrush>
+                    <SolidColorBrush Color="#32DC64" />
+                </controls:DotMatrixDigit.ActiveBrush>
+                <controls:DotMatrixDigit.InactiveBrush>
+                    <SolidColorBrush Color="#0D22C55E" />
+                </controls:DotMatrixDigit.InactiveBrush>
+            </controls:DotMatrixDigit>
+        </StackPanel>
+
+        <!-- ==================== SHOWTIME 品牌文字 ==================== -->
+        <TextBlock
+            x:Name="TxtShowTime"
+            Text="SHOWTIME"
+            FontFamily="Consolas"
+            FontSize="14"
+            FontWeight="Bold"
+            CharacterSpacing="120"
+            Foreground="#1BA1E2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,50" />
+
+        <!-- ==================== 装饰角框与边框线 ==================== -->
+        <Grid x:Name="DecorLayer" IsHitTestVisible="False">
+            <!-- 左上角 -->
+            <Rectangle Fill="#1BA1E2" Width="16" Height="3" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" />
+            <Rectangle Fill="#1BA1E2" Width="3" Height="16" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0" />
+            <!-- 右上角 -->
+            <Rectangle Fill="#1BA1E2" Width="16" Height="3" Opacity="0.8" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" />
+            <Rectangle Fill="#1BA1E2" Width="3" Height="16" Opacity="0.8" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" />
+            <!-- 左下角 -->
+            <Rectangle Fill="#1BA1E2" Width="16" Height="3" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,15" />
+            <Rectangle Fill="#1BA1E2" Width="3" Height="16" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,15" />
+            <!-- 右下角 -->
+            <Rectangle Fill="#1BA1E2" Width="16" Height="3" Opacity="0.8" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,15" />
+            <Rectangle Fill="#1BA1E2" Width="3" Height="16" Opacity="0.8" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,15" />
+            <!-- 顶部横线 -->
+            <Rectangle Fill="#1BA1E2" Height="2" Opacity="0.4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="35,16,35,0" />
+            <!-- 底部横线 -->
+            <Rectangle Fill="#1BA1E2" Height="2" Opacity="0.4" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="35,0,35,16" />
+            <!-- 左侧竖线 -->
+            <Rectangle Fill="#1BA1E2" Width="2" Opacity="0.25" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="16,35,0,35" />
+            <!-- 右侧竖线 -->
+            <Rectangle Fill="#1BA1E2" Width="2" Opacity="0.25" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,35,16,35" />
+        </Grid>
+
+        <!-- 底部状态栏（左下角） -->
+        <StackPanel
+            Orientation="Horizontal"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="22,0,0,22"
+            Opacity="0.35">
+            <TextBlock
+                x:Name="TxtChargingStatus"
+                Text="🔌"
+                FontSize="12"
+                Foreground="#66FFFFFF"
+                Margin="0,0,10,0"
+                Visibility="Collapsed" />
+            <TextBlock
+                x:Name="TxtBatteryPercent"
+                Text=""
+                FontSize="12"
+                Foreground="#66FFFFFF" />
+        </StackPanel>
+
+        <!-- 提示文字（短暂显示后渐隐） -->
+        <TextBlock
+            x:Name="TxtHint"
+            Text="长按屏幕切换常亮模式"
+            FontSize="12"
+            Foreground="#19DC2626"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,8,0,0" />
+
+        <!-- 吃豆人边框动画 -->
+        <Canvas x:Name="PacManCanvas" IsHitTestVisible="False">
+            <!-- 豆子 -->
+            <Canvas x:Name="DotsCanvas" />
+            <!-- 幽灵 -->
+            <Canvas x:Name="GhostsCanvas" />
+            <Canvas x:Name="PacMan" Width="18" Height="18" Opacity="0.85">
+                <Ellipse Width="18" Height="18" Fill="#FFD700" />
+                <Polygon x:Name="PacManMouthTop" Fill="#0A0F1A"
+                         Points="9,9 18,2 18,9" />
+                <Polygon x:Name="PacManMouthBottom" Fill="#0A0F1A"
+                         Points="9,9 18,9 18,16" />
+            </Canvas>
+        </Canvas>
+    </Grid>
+</Page>

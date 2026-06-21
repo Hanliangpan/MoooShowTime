@@ -1,0 +1,17 @@
+<UserControl
+    x:Class="MoooShowTime.Controls.PixelColon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoooShowTime.Controls"
+    Loaded="OnLoaded">
+
+    <!-- 
+        像素风格冒号控件
+        两个像素方块，绿色霓虹风格
+    -->
+    <Canvas x:Name="ColonCanvas" Width="64" Height="155">
+        <!-- 像素点由代码动态生成 
+             Canvas高度与PixelDigit一致(124px),
+             宽度容纳2个像素方块居中 -->
+    </Canvas>
+</UserControl>
